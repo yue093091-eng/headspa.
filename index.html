@@ -3,114 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chic Lash Boutique - Head Spa Form</title>
+    <title>PDF Editing and Printing</title>
     <style>
-        /* 页面整体样式 */
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+        /* 消除页面边距，让 PDF 铺满 */
+        body, html {
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            height: 100%;
+            overflow: hidden;
+            background-color: #525659; /* 模拟 PDF 阅读器的背景色 */
         }
 
-        /* 顶部导航栏 */
-        .navbar {
+        /* 让 PDF 容器占据整个屏幕 */
+        .pdf-viewer {
             width: 100%;
-            background-color: #ffffff;
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .navbar h1 {
-            margin: 0;
-            font-size: 24px;
-            color: #2c3e50;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* 按钮样式 */
-        .controls {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .btn-print {
-            background-color: #000000; /* 配合品牌色调 */
-            color: white;
-            padding: 12px 30px;
-            font-size: 16px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .btn-print:hover {
-            background-color: #333333;
-        }
-
-        /* PDF 容器样式 */
-        .pdf-container {
-            width: 95%;
-            max-width: 900px;
-            background: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-
-        iframe {
-            width: 100%;
-            height: 1100px; /* 足够显示整页 PDF */
+            height: 100vh;
             border: none;
         }
 
-        /* 打印时的优化：隐藏按钮和背景 */
+        /* 打印时只打印 PDF 内容 */
         @media print {
-            .navbar, .controls, .btn-print {
-                display: none;
-            }
-            body {
-                background-color: white;
-            }
-            .pdf-container {
-                box-shadow: none;
-                padding: 0;
-                width: 100%;
+            .pdf-viewer {
+                height: 100%;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <h1>Chic Lash Boutique</h1>
-    </div>
-
-    <div class="controls">
-        <p>Please fill out the form below. Once finished, click the button to save or print.</p>
-        <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
-    </div>
-
-    <div class="pdf-container">
-        <iframe src="headspa.pdf"></iframe>
-    </div>
-
-    <footer style="margin-bottom: 20px; color: #999; font-size: 14px;">
-        &copy; 2026 Chic Lash Boutique. All rights reserved.
-    </footer>
+    <iframe src="headspa.pdf" class="pdf-viewer"></iframe>
 
 </body>
 </html>
