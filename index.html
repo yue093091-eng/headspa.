@@ -6,36 +6,36 @@
     <title>Chic Lash Boutique - Consent Form</title>
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
     <style>
-        body { font-family: 'Helvetica', 'Arial', sans-serif; background-color: #f4f4f4; margin: 0; padding: 10px; display: flex; justify-content: center; }
-        .paper { background: white; width: 100%; max-width: 800px; padding: 25px; box-shadow: 0 0 10px rgba(0,0,0,0.1); box-sizing: border-box; border-radius: 8px; }
+        body { font-family: 'Helvetica', Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 10px; display: flex; justify-content: center; }
+        .paper { background: white; width: 100%; max-width: 800px; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.1); box-sizing: border-box; }
         
         .logo-container { text-align: center; margin-bottom: 20px; }
-        .logo-img { max-width: 200px; height: auto; } 
-        .title { text-align: center; font-size: 18px; font-weight: bold; text-decoration: underline; margin-bottom: 25px; text-transform: uppercase; color: #333; }
+        .logo-img { max-width: 220px; height: auto; } 
+        .title { text-align: center; font-size: 18px; font-weight: bold; text-decoration: underline; margin-bottom: 30px; }
         
         .row { margin-bottom: 15px; display: flex; align-items: flex-end; flex-wrap: wrap; }
-        .label { font-size: 14px; font-weight: bold; margin-right: 8px; white-space: nowrap; color: #444; }
-        input[type="text"], input[type="email"] { border: none; border-bottom: 1px solid #000; flex: 1; min-width: 150px; font-size: 16px; outline: none; padding: 2px; background: transparent; }
+        .label { font-size: 14px; font-weight: bold; margin-right: 8px; white-space: nowrap; }
+        input[type="text"], input[type="email"] { border: none; border-bottom: 1px solid black; flex: 1; min-width: 150px; font-size: 16px; outline: none; padding: 2px; background: transparent; }
         
-        .q-row { margin-top: 15px; font-size: 14px; line-height: 1.6; color: #333; }
-        label { margin-right: 10px; cursor: pointer; display: inline-flex; align-items: center; font-weight: normal; }
+        .q-row { margin-top: 18px; font-size: 14px; line-height: 1.5; }
+        label { margin-right: 12px; cursor: pointer; display: inline-flex; align-items: center; }
         input[type="radio"], input[type="checkbox"] { margin-right: 5px; width: 18px; height: 18px; }
         
-        .notice { font-size: 12px; line-height: 1.6; margin: 25px 0; padding: 15px; background: #f9f9f9; border-left: 4px solid #ccc; color: #555; }
+        /* 纯净的条款说明样式 */
+        .notice-box { font-size: 13px; line-height: 1.6; margin: 30px 0; padding: 20px; background: #f9f9f9; border-radius: 5px; color: #333; }
 
-        /* 签名板样式优化 */
-        .signature-section { margin-top: 30px; border-top: 2px solid #eee; padding-top: 20px; }
-        .signature-wrapper { border: 2px dashed #bbb; background: #fff; position: relative; width: 100%; max-width: 500px; height: 200px; margin-top: 10px; touch-action: none; border-radius: 4px; }
+        .signature-section { margin-top: 30px; border-top: 2px solid #333; padding-top: 20px; }
+        .signature-wrapper { border: 2px dashed #ccc; background: #fff; position: relative; width: 100%; max-width: 500px; height: 200px; margin-top: 10px; touch-action: none; }
         canvas { width: 100%; height: 100%; touch-action: none; }
-        .clear-btn { position: absolute; top: 10px; right: 10px; padding: 5px 12px; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; cursor: pointer; z-index: 20; }
+        .clear-btn { position: absolute; top: 10px; right: 10px; padding: 6px 12px; background: #eee; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; cursor: pointer; z-index: 10; }
 
-        .btn-save { position: fixed; bottom: 20px; right: 20px; padding: 15px 30px; background: #000; color: #fff; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; font-size: 16px; }
+        .btn-save { position: fixed; bottom: 25px; right: 25px; padding: 16px 30px; background: #000; color: #fff; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; }
 
         @media print {
             .btn-save, .clear-btn { display: none !important; }
             body { background: white; padding: 0; }
             .paper { box-shadow: none; width: 100%; padding: 0; }
-            .signature-wrapper { border: 1px solid #000; }
+            .signature-wrapper { border: 1px solid black; }
         }
     </style>
 </head>
@@ -43,7 +43,7 @@
 
 <div class="paper">
     <div class="logo-container">
-        <img src="logo.png" alt="Chic Lash Boutique" class="logo-img">
+        <img src="logo.png" alt="Logo" class="logo-img">
     </div>
 
     <div class="title">HEAD SPA AGREEMENT AND CONSENT FORM</div>
@@ -62,43 +62,34 @@
         <label><input type="checkbox"> Pass By</label>
     </div>
 
-    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-
     <div class="q-row">1. Have you received scalp massage before? <label><input type="radio" name="q1"> Yes</label> <label><input type="radio" name="q1"> No</label></div>
-    
     <div class="q-row">2. Are you on any medication? <label><input type="radio" name="q2"> Yes</label> <label><input type="radio" name="q2"> No</label></div>
-    <div class="row" style="padding-left: 20px;"><div class="label">If yes, which ones:</div><input type="text"></div>
-    
+    <div class="row" style="margin-left: 20px;"><div class="label">If yes, which ones:</div><input type="text"></div>
     <div class="q-row">3. Do you have any allergies? <label><input type="radio" name="q3"> Yes</label> <label><input type="radio" name="q3"> No</label></div>
-    <div class="row" style="padding-left: 20px;"><div class="label">If yes, which ones:</div><input type="text"></div>
-    
+    <div class="row" style="margin-left: 20px;"><div class="label">If yes, which ones:</div><input type="text"></div>
     <div class="q-row">4. Are you pregnant? <label><input type="radio" name="q4"> Yes</label> <label><input type="radio" name="q4"> No</label></div>
     
     <div class="q-row">
         5. Water temperature preference:
         <label><input type="radio" name="temp"> Cool</label> <label><input type="radio" name="temp"> Normal</label> <label><input type="radio" name="temp"> Warm</label> <label><input type="radio" name="temp"> Extra Warm</label>
     </div>
-    
     <div class="q-row">
         6. Head Massage Pressure:
         <label><input type="radio" name="hp"> Soft</label> <label><input type="radio" name="hp"> Medium</label> <label><input type="radio" name="hp"> Hard</label>
     </div>
-    
     <div class="q-row">
         7. Neck & Shoulder Massage Pressure:
         <label><input type="radio" name="np"> Soft</label> <label><input type="radio" name="np"> Medium</label> <label><input type="radio" name="np"> Hard</label>
     </div>
-    
     <div class="q-row">
         8. Please indicate if you have any of the following:
         <label><input type="checkbox"> Skin Conditions</label> <label><input type="checkbox"> Dandruff</label> <label><input type="checkbox"> Eczema</label> <label><input type="checkbox"> Psoriasis</label>
     </div>
-    
     <div class="q-row">9. Head, neck or shoulder surgery (if any):</div>
     <div class="row"><input type="text"></div>
 
-    <div class="notice">
-        [span_0](start_span)[span_1](start_span)I understand that scalp massage therapy is for stress reduction, relief from muscular tension and increasing circulation[span_0](end_span)[span_1](end_span). [span_2](start_span)[span_3](start_span)The therapist does not diagnose illness or prescribe medical treatment[span_2](end_span)[span_3](end_span). [span_4](start_span)[span_5](start_span)I will inform the therapist of my condition at each visit[span_4](end_span)[span_5](end_span).
+    <div class="notice-box">
+        I understand that scalp massage therapy is for stress reduction, relief from muscular tension and increasing circulation. The therapist does not diagnose illness or prescribe medical treatment. I will inform the therapist of my condition at each visit.
     </div>
 
     <div class="signature-section">
@@ -117,25 +108,21 @@
     const canvas = document.getElementById('signature-pad');
     const clearButton = document.getElementById('clear');
 
-    // 处理高分屏模糊
     function resizeCanvas() {
         const ratio = Math.max(window.devicePixelRatio || 1, 1);
         canvas.width = canvas.offsetWidth * ratio;
         canvas.height = canvas.offsetHeight * ratio;
         canvas.getContext("2d").scale(ratio, ratio);
-        if (window.signaturePad) signaturePad.clear();
+        if (typeof signaturePad !== 'undefined') signaturePad.clear();
     }
 
     window.addEventListener("resize", resizeCanvas);
-    
-    // 初始化签名板
+    resizeCanvas();
+
     const signaturePad = new SignaturePad(canvas, {
         backgroundColor: 'rgba(255, 255, 255, 0)',
         penColor: 'rgb(0, 0, 0)'
     });
-
-    // 初始缩放
-    resizeCanvas();
 
     clearButton.addEventListener('click', () => {
         signaturePad.clear();
