@@ -3,278 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chic Lash Boutique - Digital Consent Form</title>
+    <title>Chic Lash Boutique - Consent Form</title>
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
     <style>
-        /* 页面基础样式 */
-        body { font-family: 'Times New Roman', Times, serif; background-color: #525659; margin: 0; padding: 10px; display: flex; justify-content: center; }
-        .paper { background: white; width: 100%; max-width: 800px; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.5); box-sizing: border-box; }
-        
-        /* Logo 和标题样式 */
-        .logo-container { text-align: center; margin-bottom: 20px; }
-        .logo-img { max-width: 200px; height: auto; } /* 调整 Logo 大小 */
-        .title { text-align: center; font-size: 18px; font-weight: bold; text-decoration: underline; margin-bottom: 25px; text-transform: uppercase; }
-        
-        /* 输入框和排版样式 */
-        .row { margin-bottom: 12px; display: flex; align-items: flex-end; flex-wrap: wrap; }
-        .label { font-size: 14px; font-weight: bold; margin-right: 8px; white-space: nowrap; }
-        input[type="text"], input[type="date"] { border: none; border-bottom: 1px solid black; flex: 1; min-width: 150px; font-size: 16px; outline: none; padding: 2px; background: transparent; }
-        
-        .q-row { margin-top: 18px; font-size: 14px; line-height: 1.4; }
-        .options { margin: 8px 0; }
-        label { margin-right: 12px; cursor: pointer; display: inline-flex; align-items: center; }
-        input[type="radio"], input[type="checkbox"] { margin-right: 4px; width: 16px; height: 16px; }
-        
-        /* 签名板样式 */
-        .signature-wrapper { border: 1px solid #ccc; background: #fafafa; margin-top: 10px; position: relative; width: 100%; max-width: 400px; height: 150px; }
-        canvas { width: 100%; height: 100%; cursor: crosshair; }
-        .clear-btn { position: absolute; bottom: 5px; right: 5px; padding: 5px 10px; background: #eee; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; cursor: pointer; }
-
-        .notice { font-size: 12px; line-height: 1.5; margin-top: 25px; border-top: 1px solid #eee; padding-top: 15px; color: #444; }
-        
-        /* 浮动保存按钮 */
-        .btn-save { position: fixed; bottom: 20px; right: 20px; padding: 15px 25px; background: #000; color: #fff; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
-
-        /* 打印设置 */
-        @media print {
-            .btn-save, .clear-btn { display: none; }
-            body { background: white; padding: 0; }
-            .paper { box-shadow: none; width: 100%; max-width: 100%; padding: 0; }
-            .signature-wrapper { border: none; border-bottom: 1px solid black; }
-        }
-    </style>
-</head>
-<body>
-
-<div class="paper">
-    <div class="logo-container">
-        <img src="logo.png" alt="Chic Lash Boutique Logo" class="logo-img">
-    </div>
-
-    <div class="title">HEAD SPA AGREEMENT AND CONSENT FORM</div>
-
-    <div class="row"><div class="label">FIRST NAME:太好了！既然解决了手机填写和签名的问题，那我们就完成了 90% 的工作。
-
-针对你提出的内容补全、Logo 添加、以及签名板适配手机的问题，我为你重新编写了代码。这是一份**完全体**的代码。
-
-### 准备工作（非常重要！）
-
-为了让 Logo 显示出来，你需要把你的 Logo 图片上传到 GitHub。
-
-1.  把你的 Logo 图片文件重命名为 **`logo.png`**（确保全部小写）。
-2.  在 GitHub 仓库里，点击 **Add file** -> **Upload files**，将 `logo.png` 上传。
-3.  确保 `logo.png` 和你的 `index.html` 在同一个文件夹（仓库根目录）里。
-
----
-
-### 更新后的 `index.html` 代码
-
-请复制以下全部代码，替换你 GitHub 里原来的 `index.html` 内容：
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chic Lash Boutique - Head Spa Form</title>
-    <script src="[https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js](https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js)"></script>
-    <style>
-        /* 页面整体布局 */
         body { font-family: 'Times New Roman', Times, serif; background-color: #525659; margin: 0; padding: 10px; display: flex; justify-content: center; -webkit-overflow-scrolling: touch; }
         .paper { background: white; width: 100%; max-width: 800px; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.5); box-sizing: border-box; }
         
-        /* 1. Logo 和标题样式 */
         .logo-container { text-align: center; margin-bottom: 20px; }
-        .logo-img { max-width: 250px; height: auto; } /* 调整此值改变 Logo 大小 */
+        .logo-img { max-width: 250px; height: auto; } 
         .title { text-align: center; font-size: 18px; font-weight: bold; text-decoration: underline; margin-bottom: 25px; text-transform: uppercase; }
         
-        /* 2. 输入框和排版样式 (补全内容) */
-        .row { margin-bottom: 12px; display: flex; align-items: flex-end; flex-wrap: wrap; }
-        .label { font-size: 14px; font-weight: bold; margin-right: 8px; white-space: nowrap; }
-        input[type="text"], input[type="date"] { border: none; border-bottom: 1px solid black; flex: 1; min-width: 150px; font-size: 16px; outline: none; padding: 2px; background: transparent; }
-        
-        .q-row { margin-top: 18px; font-size: 14px; line-height: 1.4; }
-        label { margin-right: 12px; cursor: pointer; display: inline-flex; align-items: center; }
-        input[type="radio"], input[type="checkbox"] { margin-right: 4px; width: 16px; height: 16px; }
-        
-        /* 3. 签名板样式 (iPhone/iPad 优化) */
-        .signature-section { margin-top: 30px; border-top: 2px solid #000; padding-top: 20px; }
-        .signature-wrapper { border: 1px solid #ccc; background: #fafafa; position: relative; width: 100%; max-width: 400px; height: 150px; margin-top: 10px; touch-action: none; /* 关键：防止手机滑动页面 */ }
-        canvas { width: 100%; height: 100%; cursor: crosshair; }
-        .clear-btn { position: absolute; bottom: 5px; right: 5px; padding: 5px 10px; background: #eee; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; cursor: pointer; z-index: 10; }
-
-        .notice { font-size: 12px; line-height: 1.5; margin-top: 25px; border-top: 1px solid #eee; padding-top: 15px; color: #444; }
-        
-        /* 浮动保存按钮 */
-        .btn-save { position: fixed; bottom: 20px; right: 20px; padding: 15px 25px; background: #000; color: #fff; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
-
-        /* 打印设置：确保保存时签名和 Logo 都还在 */
-        @media print {
-            .btn-save, .clear-btn { display: none; }
-            body { background: white; padding: 0; }
-            .paper { box-shadow: none; width: 100%; max-width: 100%; padding: 0; }
-            .signature-wrapper { border: none; border-bottom: 1px solid black; }
-        }
-    </style>
-</head>
-<body>
-
-<div class="paper">
-    <div class="logo-container">
-        <img src="logo.png" alt="Chic Lash Boutique Logo" class="logo-img">
-    </div>
-
-    <div class="title">HEAD SPA AGREEMENT AND CONSENT FORM</div>
-
-    <div class="row"><div class="label">FIRST NAME:</div><input type="text"></div>
-    <div class="row"><div class="label">LAST NAME:</div><input type="text"></div>
-    <div class="row"><div class="label">PHONE NUMBER:看起来你已经解决了一个最大的难题——客户可以在手机上打字和进行“Yes/No”选择了。
-
-针对你提出的三个问题，我为你重新编写了代码。这份代码不仅仿照了你 Logo 图片的排版风格，最重要的是**我加入了一个能在手机和 iPad 上完美工作的“手写签名板”**。
-
-### 准备工作 (非常重要)
-
-为了让Logo在网页上显示出来，你需要执行以下操作：
-1.  把你那张 Logo 图片重命名为 **`logo.png`** (确保全部小写)。
-2.  在 GitHub 仓库里，点击 **Add file** -> **Upload files**。
-3.  把 `logo.png` 和你的网页代码文件上传到同一个根目录下。
-
----
-
-### 更新后的 `index.html` 代码
-
-请复制以下全部代码，替换你 GitHub 里原来的 `index.html` 内容：
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chic Lash Boutique - Digital Consent Form</title>
-    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
-    <style>
-        /* 页面整体布局 */
-        body { font-family: 'Times New Roman', Times, serif; background-color: #525659; margin: 0; padding: 10px; display: flex; justify-content: center; }
-        .paper { background: white; width: 100%; max-width: 800px; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.5); box-sizing: border-box; }
-        
-        /* 1. Logo 区域样式 */
-        .logo-container { text-align: center; margin-bottom: 20px; }
-        .logo-img { max-width: 250px; height: auto; } /* 在此调整 Logo 大小 */
-        .boutique-text { font-size: 14px; letter-spacing: 4px; text-transform: uppercase; color: #555; margin-top: -10px; }
-        .title { text-align: center; font-size: 18px; font-weight: bold; text-decoration: underline; margin-bottom: 30px; margin-top: 10px; text-transform: uppercase; }
-        
-        /* 2. 内容补全区域样式 */
-        .row { margin-bottom: 12px; display: flex; align-items: flex-end; flex-wrap: wrap; }
-        .label { font-size: 14px; font-weight: bold; margin-right: 8px; white-space: nowrap; }
-        input[type="text"], input[type="date"], input[type="email"] { border: none; border-bottom: 1px solid black; flex: 1; min-width: 150px; font-size: 16px; outline: none; padding: 2px; background: transparent; }
-        
-        .q-row { margin-top: 20px; font-size: 14px; line-height: 1.4; }
-        label { margin-right: 12px; cursor: pointer; display: inline-flex; align-items: center; }
-        input[type="radio"], input[type="checkbox"] { margin-right: 4px; width: 16px; height: 16px; }
-        
-        /* 3. 手写签名区域样式 (优化 iOS/Android) */
-        .signature-section { margin-top: 30px; border-top: 2px solid #000; padding-top: 20px; }
-        .signature-wrapper { border: 1px solid #ccc; background: #fafafa; width: 100%; max-width: 400px; height: 150px; margin-top: 10px; position: relative; }
-        canvas { width: 100%; height: 100%; cursor: crosshair; touch-action: none; /* 关键：防止手机滑动页面 */ }
-        .clear-btn { position: absolute; bottom: 5px; right: 5px; padding: 5px 10px; background: #eee; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; cursor: pointer; }
-
-        .notice { font-size: 12px; line-height: 1.5; margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; }
-        
-        /* 保存/打印按钮 */
-        .btn-save { position: fixed; bottom: 20px; right: 20px; padding: 15px 25px; background: #000; color: #fff; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-
-        @media print {
-            .btn-save, .clear-btn { display: none; }
-            body { background: white; padding: 0; }
-            .paper { box-shadow: none; width: 100%; max-width: 100%; padding: 0; }
-            .signature-wrapper { border: none; border-bottom: 1px solid black; }
-        }
-    </style>
-</head>
-<body>
-
-<div class="paper">
-    <div class="logo-container">
-        <img src="logo.png" alt="Chic Lash Boutique Logo" class="logo-img">
-    </div>
-
-    <div class="title">HEAD SPA AGREEMENT AND CONSENT FORM</div>
-
-    <div class="row"><div class="label">FIRST NAME:</div><input type="text"></div>
-    <div class="row"><div class="label">LAST NAME:</div><input type="text"></div>
-    <div class="row"><div class="label">PHONE NUMBER:</div><input type="text"></div>
-    <div class="row"><div class="label">E-MAIL:</div><input type="email"></div>
-    <div class="row"><div class="label">DATE OF BIRTH:</div><input type="text" placeholder="MM/DD"></div>
-
-    <div class="q-row">
-        1. Have you received scalp massage before? 
-        <label><input type="radio" name="q1"> Yes</label>
-        <label><input type="radio" name="q1"> No</label>
-    </div>
-
-    <div class="q-row">
-        2. Are you on any medication? 
-        <label><input type="radio" name="q2"> Yes</label>
-        <label><input type="radio" name="q2"> No</label>
-        <div class="row" style="margin-top:5px;"><div class="label">If yes, which ones:太棒了！既然解决了打字和“Yes/No”选择的问题，那我们就完成了 90% 的工作。
-
-针对你提出的内容补全、Logo 添加、以及签名板适配手机的问题，我为你重新编写了完全体的代码。
-
-### 准备工作（非常重要！）
-
-为了让你的 Logo 图片显示在网页最顶端，你需要：
-1.  把你的 Logo 图片文件重命名为 **`logo.png`**（确保全部小写）。
-2.  在 GitHub 仓库里，点击 **Add file** -> **Upload files**，将 `logo.png` 上传。
-3.  确保 `logo.png` 和你的 `index.html` 在同一个文件夹里。
-
----
-
-### 更新后的 `index.html` 代码
-
-请复制以下全部代码，替换你 GitHub 里原来的 `index.html` 内容：
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chic Lash Boutique - Digital Consent Form</title>
-    <script src="[https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js](https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js)"></script>
-    <style>
-        /* 页面整体布局 */
-        body { font-family: 'Times New Roman', Times, serif; background-color: #525659; margin: 0; padding: 10px; display: flex; justify-content: center; -webkit-overflow-scrolling: touch; }
-        .paper { background: white; width: 100%; max-width: 800px; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.5); box-sizing: border-box; }
-        
-        /* 1. Logo 和标题样式 */
-        .logo-container { text-align: center; margin-bottom: 20px; }
-        .logo-img { max-width: 250px; height: auto; } /* 在这里调整 Logo 的大小 */
-        .title { text-align: center; font-size: 18px; font-weight: bold; text-decoration: underline; margin-bottom: 25px; text-transform: uppercase; }
-        
-        /* 2. 输入框和排版样式 (补全内容) */
         .row { margin-bottom: 12px; display: flex; align-items: flex-end; flex-wrap: wrap; }
         .label { font-size: 14px; font-weight: bold; margin-right: 8px; white-space: nowrap; }
         input[type="text"], input[type="date"], input[type="email"] { border: none; border-bottom: 1px solid black; flex: 1; min-width: 150px; font-size: 16px; outline: none; padding: 2px; background: transparent; }
         
         .q-row { margin-top: 18px; font-size: 14px; line-height: 1.4; }
-        .options { margin: 8px 0; }
         label { margin-right: 12px; cursor: pointer; display: inline-flex; align-items: center; }
         input[type="radio"], input[type="checkbox"] { margin-right: 4px; width: 16px; height: 16px; }
         
-        /* 3. 手写签名区域样式 (适配 iOS/iPad) */
         .signature-section { margin-top: 30px; border-top: 2px solid #000; padding-top: 20px; }
-        .signature-wrapper { border: 1px solid #ccc; background: #fafafa; position: relative; width: 100%; max-width: 400px; height: 150px; margin-top: 10px; touch-action: none; /* 关键：防止手机滑动页面 */ }
+        .signature-wrapper { border: 1px solid #ccc; background: #fafafa; position: relative; width: 100%; max-width: 400px; height: 150px; margin-top: 10px; touch-action: none; }
         canvas { width: 100%; height: 100%; cursor: crosshair; }
         .clear-btn { position: absolute; bottom: 5px; right: 5px; padding: 5px 10px; background: #eee; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; cursor: pointer; z-index: 10; }
 
         .notice { font-size: 12px; line-height: 1.5; margin-top: 25px; border-top: 1px solid #eee; padding-top: 15px; color: #444; }
-        
-        /* 浮动保存按钮 */
         .btn-save { position: fixed; bottom: 20px; right: 20px; padding: 15px 25px; background: #000; color: #fff; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
 
-        /* 打印设置：确保保存时签名板内容正确显示 */
         @media print {
             .btn-save, .clear-btn { display: none; }
             body { background: white; padding: 0; }
@@ -290,72 +44,96 @@
         <img src="logo.png" alt="Chic Lash Boutique Logo" class="logo-img">
     </div>
 
-    <div class="title">HEAD SPA AGREEMENT AND CONSENT FORM</div>
+    [span_0](start_span)<div class="title">HEAD SPA AGREEMENT AND CONSENT FORM[span_0](end_span)</div>
 
     <div class="row"><div class="label">FIRST NAME:</div><input type="text"></div>
     <div class="row"><div class="label">LAST NAME:</div><input type="text"></div>
     <div class="row"><div class="label">PHONE NUMBER:</div><input type="text"></div>
     <div class="row"><div class="label">E-MAIL:</div><input type="email"></div>
-    <div class="row"><div class="label">DATE OF BIRTH:</div><input type="text" placeholder="MM/DD"></div>
+    <div class="row"><div class="label">DATE OF BIRTH (MM/DD):</div><input type="text"></div>
+    
+    <div class="q-row">
+        [span_1](start_span)How did you hear about us?[span_1](end_span)
+        <label><input type="checkbox"> Google</label>
+        <label><input type="checkbox"> Yelp</label>
+        <label><input type="checkbox"> Friend</label>
+        <label><input type="checkbox"> Pass By</label>
+    </div>
+
+    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
 
     <div class="q-row">
-        1. Have you received scalp massage before? 
+        1. [span_2](start_span)Have you received scalp massage before?[span_2](end_span)
         <label><input type="radio" name="q1"> Yes</label>
         <label><input type="radio" name="q1"> No</label>
     </div>
 
     <div class="q-row">
-        2. Are you on any medication? 
+        2. [span_3](start_span)Are you on any medication?[span_3](end_span)
         <label><input type="radio" name="q2"> Yes</label>
         <label><input type="radio" name="q2"> No</label>
         <div class="row" style="margin-top:5px;"><div class="label">If yes, which ones:</div><input type="text"></div>
     </div>
 
     <div class="q-row">
-        3. Do you have any allergies? 
+        3. [span_4](start_span)Do you have any allergies?[span_4](end_span)
         <label><input type="radio" name="q3"> Yes</label>
         <label><input type="radio" name="q3"> No</label>
         <div class="row" style="margin-top:5px;"><div class="label">If yes, which ones:</div><input type="text"></div>
     </div>
 
     <div class="q-row">
-        4. Are you pregnant? 
-        <label><input type="radio" name="pregnant"> Yes</label>
-        <label><input type="radio" name="pregnant"> No</label>
+        4. [span_5](start_span)Are you pregnant?[span_5](end_span)
+        <label><input type="radio" name="q4"> Yes</label>
+        <label><input type="radio" name="q4"> No</label>
     </div>
 
     <div class="q-row">
-        5. Water temperature preference:
+        5. [span_6](start_span)Water temperature preference:[span_6](end_span)
         <label><input type="radio" name="temp"> Cool</label>
         <label><input type="radio" name="temp"> Normal</label>
         <label><input type="radio" name="temp"> Warm</label>
+        <label><input type="radio" name="temp"> Extra Warm</label>
     </div>
 
     <div class="q-row">
-        6. Head Massage Pressure:
+        6. [span_7](start_span)Head Massage Pressure:[span_7](end_span)
         <label><input type="radio" name="head_p"> Soft</label>
         <label><input type="radio" name="head_p"> Medium</label>
         <label><input type="radio" name="head_p"> Hard</label>
     </div>
 
     <div class="q-row">
-        7. Neck & Shoulder Massage Pressure:
+        7. [span_8](start_span)Neck & Shoulder Massage Pressure:[span_8](end_span)
         <label><input type="radio" name="neck_p"> Soft</label>
         <label><input type="radio" name="neck_p"> Medium</label>
         <label><input type="radio" name="neck_p"> Hard</label>
     </div>
 
+    <div class="q-row">
+        8. [span_9](start_span)Please indicate if you have any of the following:[span_9](end_span)
+        <label><input type="checkbox"> Skin Conditions</label>
+        <label><input type="checkbox"> Dandruff</label>
+        <label><input type="checkbox"> Eczema</label>
+        <label><input type="checkbox"> Psoriasis</label>
+    </div>
+
+    <div class="q-row">
+        9. [span_10](start_span)Head, neck or shoulder surgery:[span_10](end_span)
+        <div class="row" style="margin-top:5px;"><input type="text"></div>
+    </div>
+
     <div class="notice">
-        I understand that scalp massage therapy is for the purpose of stress reduction, relief from muscular tension or spasm, or for increasing circulation. I understand that the therapist does not diagnose illness, disease or any other physical or mental disorder. The therapist does not prescribe medical treatment nor perform spinal manipulations. I will inform the therapist of my current condition at the time of each visit.
+        [span_11](start_span)I understand that scalp massage therapy is for stress reduction, relief from muscular tension and increasing circulation.[span_11](end_span) [span_12](start_span)The therapist does not diagnose illness or prescribe medical treatment.[span_12](end_span) [span_13](start_span)I will inform the therapist of my condition at each visit.[span_13](end_span)
     </div>
 
     <div class="signature-section">
-        <div class="label">Signature:</div>
+        [span_14](start_span)<div class="label">Signature:[span_14](end_span)</div>
         <div class="signature-wrapper">
             <canvas id="signature-pad"></canvas>
-            <button class="clear-btn" id="clear">Clear</button>
+            <button class="clear-btn" type="button" id="clear">Clear</button>
         </div>
-        <div class="row" style="margin-top:15px;"><div class="label">Date:</div><input type="date"></div>
+        [span_15](start_span)<div class="row" style="margin-top:15px;"><div class="label">Date:[span_15](end_span)</div><input type="date"></div>
     </div>
 </div>
 
@@ -365,11 +143,17 @@
     const canvas = document.getElementById('signature-pad');
     const clearButton = document.getElementById('clear');
 
-    // 适配 Retina 屏幕分辨率
-    const ratio = Math.max(window.devicePixelRatio || 1, 1);
-    canvas.width = canvas.offsetWidth * ratio;
-    canvas.height = canvas.offsetHeight * ratio;
-    canvas.getContext("2d").scale(ratio, ratio);
+    // 解决手机模糊问题
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+        if (typeof signaturePad !== 'undefined') signaturePad.clear();
+    }
+
+    window.onresize = resizeCanvas;
+    resizeCanvas();
 
     const signaturePad = new SignaturePad(canvas, {
         backgroundColor: 'rgba(255, 255, 255, 0)',
