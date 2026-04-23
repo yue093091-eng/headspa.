@@ -3,40 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Editing and Printing</title>
+    <title>Chic Lash Boutique - Head Spa Form</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            background-color: #525659;
-        }
-        /* 针对手机端优化的容器 */
-        .pdf-viewer {
-            width: 100%;
-            height: 100vh;
-            border: none;
-            display: block;
-        }
-        /* 提示层：如果手机还是打不开，显示一个下载按钮 */
-        .fallback {
-            display: none;
-            text-align: center;
-            color: white;
-            padding-top: 50px;
+        body { font-family: 'Times New Roman', Times, serif; background-color: #525659; margin: 0; padding: 20px; display: flex; justify-content: center; }
+        .paper { background: white; width: 100%; max-width: 800px; min-height: 100vh; padding: 40px; box-shadow: 0 0 10px rgba(0,0,0,0.5); box-sizing: border-box; }
+        .logo { text-align: center; font-size: 28px; font-weight: bold; letter-spacing: 2px; margin-bottom: 5px; }
+        .boutique { text-align: center; font-size: 14px; letter-spacing: 4px; margin-bottom: 30px; }
+        .title { text-align: center; font-size: 18px; font-weight: bold; text-decoration: underline; margin-bottom: 30px; }
+        
+        .row { margin-bottom: 15px; display: flex; align-items: flex-end; }
+        .label { font-size: 14px; font-weight: bold; margin-right: 10px; white-space: nowrap; }
+        input[type="text"], input[type="date"] { border: none; border-bottom: 1px solid black; flex: 1; font-size: 16px; outline: none; padding: 2px; background: transparent; }
+        
+        .q-row { margin-top: 20px; font-size: 14px; }
+        .options { margin: 10px 0; }
+        label { margin-right: 15px; cursor: pointer; }
+        
+        .notice { font-size: 12px; line-height: 1.5; margin-top: 30px; border-top: 1px solid #ccc; padding-top: 20px; }
+        .btn-save { position: fixed; bottom: 20px; right: 20px; padding: 15px 25px; background: #000; color: #fff; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+
+        @media print {
+            .btn-save { display: none; }
+            body { background: white; padding: 0; }
+            .paper { box-shadow: none; width: 100%; max-width: 100%; padding: 0; }
         }
     </style>
 </head>
 <body>
 
-    <embed src="headspa.pdf#toolbar=0&view=FitH" type="application/pdf" class="pdf-viewer" />
+<div class="paper">
+    <div class="logo">chiclash</div>
+    <div class="boutique">BOUTIQUE</div>
+    <div class="title">HEAD SPA AGREEMENT AND CONSENT FORM</div>
 
-    <div class="fallback" id="fallbackText">
-        <p>This browser doesn't support online filling.</p>
-        <a href="headspa.pdf" style="color: #ffdbac;">Click here to download and fill</a>
+    <div class="row"><div class="label">FIRST NAME:</div><input type="text"></div>
+    <div class="row"><div class="label">LAST NAME:</div><input type="text"></div>
+    <div class="row"><div class="label">PHONE NUMBER:</div><input type="text"></div>
+    <div class="row"><div class="label">E-MAIL:</div><input type="text"></div>
+    <div class="row"><div class="label">DATE OF BIRTH:</div><input type="text" placeholder="MM/DD"></div>
+
+    <div class="q-row">
+        1. Have you received scalp massage before? 
+        <label><input type="radio" name="q1"> Yes</label>
+        <label><input type="radio" name="q1"> No</label>
     </div>
+
+    <div class="q-row">
+        2. Are you on any medication? 
+        <label><input type="radio" name="q2"> Yes</label>
+        <label><input type="radio" name="q2"> No</label>
+        <div class="row" style="margin-top:5px;"><div class="label">If yes, which ones:</div><input type="text"></div>
+    </div>
+
+    <div class="q-row">
+        3. Do you have any allergies? 
+        <label><input type="radio" name="q3"> Yes</label>
+        <label><input type="radio" name="q3"> No</label>
+        <div class="row" style="margin-top:5px;"><div class="label">If yes, which ones:</div><input type="text"></div>
+    </div>
+
+    <div class="q-row">
+        4. Water temperature preference:
+        <label><input type="radio" name="temp"> Cool</label>
+        <label><input type="radio" name="temp"> Normal</label>
+        <label><input type="radio" name="temp"> Warm</label>
+    </div>
+
+    <div class="q-row">
+        5. Head Massage Pressure:
+        <label><input type="radio" name="p1"> Soft</label>
+        <label><input type="radio" name="p1"> Medium</label>
+        <label><input type="radio" name="p1"> Hard</label>
+    </div>
+
+    <div class="notice">
+        I understand that scalp massage therapy is for the purpose of stress reduction... I will inform the therapist of my current condition at the time of each visit.
+    </div>
+
+    <div class="row" style="margin-top:30px;"><div class="label">Signature:</div><input type="text" placeholder="Type your name"></div>
+    <div class="row"><div class="label">Date:</div><input type="date"></div>
+</div>
+
+<button class="btn-save" onclick="window.print()">SAVE / PRINT</button>
 
 </body>
 </html>
