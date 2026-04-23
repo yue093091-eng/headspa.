@@ -21,13 +21,13 @@
         label { margin-right: 12px; cursor: pointer; display: inline-flex; align-items: center; }
         input[type="radio"], input[type="checkbox"] { margin-right: 5px; width: 18px; height: 18px; }
         
-        /* 纯净的条款说明样式 */
-        .notice-box { font-size: 13px; line-height: 1.6; margin: 30px 0; padding: 20px; background: #f9f9f9; border-radius: 5px; color: #333; }
+        .notice-box { font-size: 13px; line-height: 1.6; margin: 30px 0; padding: 20px; background: #f9f9f9; border-radius: 5px; color: #333; border: 1px solid #eee; }
 
+        /* 签名区域修复 */
         .signature-section { margin-top: 30px; border-top: 2px solid #333; padding-top: 20px; }
         .signature-wrapper { border: 2px dashed #ccc; background: #fff; position: relative; width: 100%; max-width: 500px; height: 200px; margin-top: 10px; touch-action: none; }
-        canvas { width: 100%; height: 100%; touch-action: none; }
-        .clear-btn { position: absolute; top: 10px; right: 10px; padding: 6px 12px; background: #eee; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; cursor: pointer; z-index: 10; }
+        canvas { width: 100%; height: 100%; touch-action: none; display: block; }
+        .clear-btn { position: absolute; top: 10px; right: 10px; padding: 6px 12px; background: #eee; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; cursor: pointer; z-index: 100; }
 
         .btn-save { position: fixed; bottom: 25px; right: 25px; padding: 16px 30px; background: #000; color: #fff; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; }
 
@@ -35,7 +35,7 @@
             .btn-save, .clear-btn { display: none !important; }
             body { background: white; padding: 0; }
             .paper { box-shadow: none; width: 100%; padding: 0; }
-            .signature-wrapper { border: 1px solid black; }
+            .signature-wrapper { border: none; border-bottom: 1px solid black; }
         }
     </style>
 </head>
@@ -65,8 +65,10 @@
     <div class="q-row">1. Have you received scalp massage before? <label><input type="radio" name="q1"> Yes</label> <label><input type="radio" name="q1"> No</label></div>
     <div class="q-row">2. Are you on any medication? <label><input type="radio" name="q2"> Yes</label> <label><input type="radio" name="q2"> No</label></div>
     <div class="row" style="margin-left: 20px;"><div class="label">If yes, which ones:</div><input type="text"></div>
+    
     <div class="q-row">3. Do you have any allergies? <label><input type="radio" name="q3"> Yes</label> <label><input type="radio" name="q3"> No</label></div>
     <div class="row" style="margin-left: 20px;"><div class="label">If yes, which ones:</div><input type="text"></div>
+    
     <div class="q-row">4. Are you pregnant? <label><input type="radio" name="q4"> Yes</label> <label><input type="radio" name="q4"> No</label></div>
     
     <div class="q-row">
@@ -89,13 +91,13 @@
     <div class="row"><input type="text"></div>
 
     <div class="notice-box">
-        I understand that scalp massage therapy is for stress reduction, relief from muscular tension and increasing circulation. The therapist does not diagnose illness or prescribe medical treatment. I will inform the therapist of my condition at each visit.
+        I understand that scalp massage therapy is for the purpose of stress reduction, relief from muscular tension or spasm, or for increasing circulation. I understand that the therapist does not diagnose illness, disease or any other physical or mental disorder. The therapist does not prescribe medical treatment nor perform spinal manipulations. I will inform the therapist of my current condition at the time of each visit.
     </div>
 
     <div class="signature-section">
         <div class="label">Customer Signature:</div>
         <div class="signature-wrapper">
-            <button class="clear-btn" type="button" id="clear">Clear</button>
+            <button class="clear-btn" type="button" id="clearBtn">Clear</button>
             <canvas id="signature-pad"></canvas>
         </div>
         <div class="row" style="margin-top:20px;"><div class="label">Date:</div><input type="text" placeholder="YYYY-MM-DD"></div>
@@ -106,25 +108,30 @@
 
 <script>
     const canvas = document.getElementById('signature-pad');
-    const clearButton = document.getElementById('clear');
+    const clearButton = document.getElementById('clearBtn');
+    let signaturePad;
 
     function resizeCanvas() {
         const ratio = Math.max(window.devicePixelRatio || 1, 1);
         canvas.width = canvas.offsetWidth * ratio;
         canvas.height = canvas.offsetHeight * ratio;
         canvas.getContext("2d").scale(ratio, ratio);
-        if (typeof signaturePad !== 'undefined') signaturePad.clear();
+        if (signaturePad) signaturePad.clear();
     }
 
+    // 初始化逻辑
+    window.onload = function() {
+        signaturePad = new SignaturePad(canvas, {
+            backgroundColor: 'rgba(255, 255, 255, 0)',
+            penColor: 'rgb(0, 0, 0)'
+        });
+        resizeCanvas();
+    };
+
     window.addEventListener("resize", resizeCanvas);
-    resizeCanvas();
 
-    const signaturePad = new SignaturePad(canvas, {
-        backgroundColor: 'rgba(255, 255, 255, 0)',
-        penColor: 'rgb(0, 0, 0)'
-    });
-
-    clearButton.addEventListener('click', () => {
+    clearButton.addEventListener('click', function(event) {
+        event.preventDefault();
         signaturePad.clear();
     });
 </script>
